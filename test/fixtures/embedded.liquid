@@ -1,0 +1,33 @@
+{% comment %} Liquid inside HTML attributes, script, style and schema {% endcomment %}
+<div class="card {{ section.settings.style | escape }}" data-id="{{ product.id }}">
+  {% # inline comment %}
+  {%- if product.available -%}
+    <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
+  {%- else -%}
+    <span>{{ 'products.sold_out' | t }}</span>
+  {%- endif -%}
+</div>
+
+<script>
+  const productId = {{ product.id | json }};
+  const title = "{{ product.title | escape }}";
+</script>
+
+<style>
+  .card { background: url("{{ 'bg.png' | asset_url }}"); color: {{ settings.color }}; }
+</style>
+
+{% stylesheet %}
+  .card { padding: 1rem; }
+{% endstylesheet %}
+
+{% javascript %}
+  document.querySelector('.card').addEventListener('click', () => {});
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "Card",
+  "settings": [{ "type": "text", "id": "style", "label": "Style" }]
+}
+{% endschema %}

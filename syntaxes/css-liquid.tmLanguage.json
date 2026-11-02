@@ -1,0 +1,12 @@
+{
+  "scopeName": "source.css.liquid",
+  "patterns": [
+    {
+      "include": "text.html.liquid#injection"
+    },
+    {
+      "include": "source.css"
+    }
+  ],
+  "repository": {}
+}

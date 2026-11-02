@@ -1,0 +1,63 @@
+{
+  "manifestVersion": 2,
+  "id": "liquid-syntax",
+  "name": "Liquid Syntax",
+  "version": "0.1.0",
+  "description": "Shopify Liquid highlighting for .liquid files, with HTML, CSS, JavaScript and {% schema %} JSON inside them.",
+  "engines": {
+    "orca": ">=1.4.246"
+  },
+  "execution": "data",
+  "contributes": {
+    "syntaxes": [
+      {
+        "id": "liquid",
+        "title": "Liquid",
+        "scopeName": "text.html.liquid",
+        "path": "syntaxes/liquid.tmLanguage.json",
+        "configuration": "syntaxes/language-configuration.json",
+        "extensions": [".liquid"]
+      },
+      {
+        "id": "liquid-javascript-file",
+        "title": "JavaScript (Liquid)",
+        "scopeName": "source.js.liquid",
+        "path": "syntaxes/javascript-liquid.tmLanguage.json",
+        "configuration": "syntaxes/javascript-liquid-configuration.json",
+        "extensions": [".js.liquid"]
+      },
+      {
+        "id": "liquid-css-file",
+        "title": "CSS (Liquid)",
+        "scopeName": "source.css.liquid",
+        "path": "syntaxes/css-liquid.tmLanguage.json",
+        "configuration": "syntaxes/css-liquid-configuration.json",
+        "extensions": [".css.liquid"]
+      },
+      {
+        "id": "liquid-embedded-html",
+        "title": "HTML (embedded in Liquid)",
+        "scopeName": "text.html.basic",
+        "path": "syntaxes/html.tmLanguage.json"
+      },
+      {
+        "id": "liquid-embedded-css",
+        "title": "CSS (embedded in Liquid)",
+        "scopeName": "source.css",
+        "path": "syntaxes/css.tmLanguage.json"
+      },
+      {
+        "id": "liquid-embedded-javascript",
+        "title": "JavaScript (embedded in Liquid)",
+        "scopeName": "source.js",
+        "path": "syntaxes/javascript.tmLanguage.json"
+      },
+      {
+        "id": "liquid-embedded-json",
+        "title": "JSON (embedded in Liquid)",
+        "scopeName": "source.json",
+        "path": "syntaxes/json.tmLanguage.json"
+      }
+    ]
+  }
+}
