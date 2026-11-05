@@ -2,8 +2,9 @@
   "manifestVersion": 2,
   "id": "liquid-syntax",
   "name": "Liquid Syntax",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Shopify Liquid highlighting for .liquid files, with HTML, CSS, JavaScript and {% schema %} JSON inside them.",
+  "license": "MIT",
   "engines": {
     "orca": ">=1.4.246"
   },
